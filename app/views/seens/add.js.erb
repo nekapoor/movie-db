@@ -1,0 +1,6 @@
+$("#seens_<%= @seen.movie_id %>").html("<%= j render(partial: 'seens/remove_from_seen', locals: { seen: @seen }) %>")
+<% if @seen_list.blank? %>
+	$("#seenlists").html("<%= j render(partial: 'shared/no_movies') %>")
+<% else %>
+	$("#seenlists").html("<%= j render(partial: 'shared/seen', collection: @seen_list) %>")
+<% end %>

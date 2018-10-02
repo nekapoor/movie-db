@@ -1,0 +1,9 @@
+%main
+  %section.slice.slice-lg
+    .container.top-buffer
+      .row
+        .col-md-11.mx-auto
+          .mb-lg
+            %h3.font-weight-light Results
+            .row
+              =render partial: 'shared/movie', collection: @movies

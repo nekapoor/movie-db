@@ -1,0 +1,12 @@
+%header
+  %nav#navbar_main.navbar.navbar-expand-lg.navbar-transparent.bg-dark.py-3
+    .container
+      %a.navbar-brand.mr-lg-5{:href => "/"}
+        %strong Movies!
+      %button.navbar-toggler{"aria-controls" => "navbar_main", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbar_main_collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbar_main_collapse.collapse.navbar-collapse
+        %ul.navbar-nav.align-items-lg-center.ml-lg-auto
+          .form-group
+            %form{:action => "/search"}
+              %input.form-control#search{:placeholder => "Search For Movies", :type => "text", :name => "q"}/

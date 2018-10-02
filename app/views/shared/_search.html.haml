@@ -1,0 +1,9 @@
+%main
+  %section
+    .container.top-buffer
+      .row
+        .col-md-11.mx-auto
+          .form-group
+            %form{:action => "/search"}
+              %input.form-control#search{:placeholder => "Search For Movies", :type => "text", :name => "q"}/
+          %hr

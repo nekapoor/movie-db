@@ -1,0 +1,28 @@
+%main
+  %section.slice
+    .container.top-buffer
+      .row.h-100
+        .col-md-12.mx-auto
+          .mb-lg
+            %h4.font-weight-light Popular Movies
+            %hr/
+            .row#popularlist
+              =render partial: 'shared/popular', collection: @popular  
+        .col-md-12.mx-auto
+          .mb-lg
+            %h4.font-weight-light My List
+            %hr/
+            .row#watchlists
+              -if @watch_lists.blank?
+                =render partial: 'shared/no_movies'
+              =render partial: 'shared/watch_list', collection: @watch_lists  
+        .col-md-12.mx-auto
+          .mb-lg
+            %h4.font-weight-light Movies I've Seen
+            %hr/
+            .row#seenlists
+              -if @seen_list.blank?
+                =render partial: 'shared/no_movies'
+              =render partial: 'shared/seen', collection: @seen_list  
+
+

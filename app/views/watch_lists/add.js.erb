@@ -1,0 +1,6 @@
+$("#watchlist_<%= @watch_list.movie_id %>").html("<%= j render(partial: 'watch_lists/remove_from_watchlist', locals: { watch_list: @watch_list }) %>")
+<% if @watch_lists.blank? %>
+	$("#watchlists").html("<%= j render(partial: 'shared/no_movies') %>")
+<% else %>
+	$("#watchlists").html("<%= j render(partial: 'shared/watch_list', collection: @watch_lists) %>")
+<% end %>
