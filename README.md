@@ -28,3 +28,5 @@ I think the interface I built was pretty decent. It covers all the bases of what
 * DRY up some code. There is duplicated code in places. With more time, I would have moved more of these into partials. 
 
 * Better naming. I used WatchList as a data model, which is fine. But then I used 'Seen' as another data model name. I should have named it SeenList to keep the symmetry.  
+
+* Implement some basic caching for previously searched for movies or for popular movies that might be searched for.
