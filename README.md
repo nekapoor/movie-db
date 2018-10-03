@@ -17,7 +17,7 @@ You can find it at [https://github.com/nekapoor/movie-db](https://github.com/nek
 
 ##### What went well
 
-I think the interface I built was pretty decent. It covers all the bases of what was asked for in the challenge and it's fairly clear.  The biggest challenge I found outside of the UI/UX, was making the application single page and more "react"-like. I think I did that pretty well using Rails, JQuery and AJAX. That being said, I think the app would be more snappy using a React frontend.
+I think the interface I built was pretty decent. It covers all the bases of what was asked for in the challenge and it's fairly clear.  The biggest challenge I found outside of the UI/UX, was making the application single page and more "react"-like. I think I did that pretty well using Rails, JQuery and AJAX. That being said, I think the app would be more snappy using a React frontend. I chose Rails because I am most familiar with the framework and styling was much easier than it would have been using React.
 
 ##### What I would have done with more time
 
