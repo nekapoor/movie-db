@@ -1,12 +1,22 @@
-%header
-  %nav#navbar_main.navbar.navbar-expand-lg.navbar-transparent.bg-dark.py-3
+%header.fixed-top
+  %nav#navbar_main.navbar.navbar-expand-lg.bg-dark.py-3
     .container
       %a.navbar-brand.mr-lg-5{:href => "/"}
         %strong Movies!
       %button.navbar-toggler{"aria-controls" => "navbar_main", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbar_main_collapse", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbar_main_collapse.collapse.navbar-collapse
+        %ul.navbar-nav.align-items-lg-center
+          %li.nav-item
+            =link_to "WATCH LIST", "#watchlist-title", class: "nav-link text-white"
+          %li.nav-item
+            =link_to "MOVIES I'VE SEEN", "#seen-title", class: "nav-link text-white"
+          %li.nav-item
+            =link_to "POPULAR MOVIES", "#popular-title", class: "nav-link text-white"
+
         %ul.navbar-nav.align-items-lg-center.ml-lg-auto
           .form-group
             %form{:action => "/search"}
               %input.form-control#search{:placeholder => "Search For Movies", :type => "text", :name => "q"}/
+
+/ for watch list and movies I've seen, add in genres and also add in when they were added (eg, "Added 4 days ago")
