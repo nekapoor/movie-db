@@ -27,10 +27,6 @@ module MovieDatabase
       movie.overview[0..char_count] + "..."
     end
 
-    def release_date
-      movie.release_date
-    end
-
     def id
       movie.id
     end

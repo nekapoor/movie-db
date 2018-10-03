@@ -1,1 +1,49 @@
-sfads
+%main
+  %section.slice
+    .container.top-buffer
+      .row.h-100
+        .col-md-10.mx-auto
+          .mb-5
+            =image_tag @movie.backdrop_path, width: "100%"
+      .row.h-100
+        .col-md-10.mx-auto
+          %h3.h3=@movie.title
+          %small
+            .mb-5
+              Released on #{@movie.release_date}
+      .row
+        .col-md-10.mx-auto.mb-5
+          %div.mb-2{id: "watchlist_#{@movie.id}"}
+            -if @movie.on_watch_list?
+              .mr-2
+                =link_to remove_watch_lists_path(id: @movie.id), method: :post, remote: true do
+                  %button.btn.btn-sm.btn-dark.btn-icon-label{:type => "button"}
+                    %span.btn-inner--icon
+                      %ion-icon{:name => "checkmark", :size => "large"}
+                    %span.btn-inner--text To Watch
+
+            -else
+              .mr-2
+                =link_to add_watch_lists_path(id: @movie.id, image_path: @movie.poster_image), method: :post, remote: true do
+                  %button.btn.btn-sm.btn-dark.btn-icon-label{:type => "button"}
+                    %span.btn-inner--icon
+                      %ion-icon{:name => "add", :size => "large"}
+                    %span.btn-inner--text To Watch
+
+          %div{id: "seens_#{@movie.id}"}
+            -if @movie.on_seen_list?
+              =link_to remove_seens_path(id: @movie.id), method: :post, remote: true do
+                %button.btn.btn-sm.btn-dark.btn-icon-label{:type => "button"}
+                  %span.btn-inner--icon
+                    %ion-icon{:name => "checkmark", :size => "large"}
+                  %span.btn-inner--text Seen
+            -else
+              =link_to add_seens_path(id: @movie.id, image_path: @movie.poster_image), method: :post, remote: true do
+                %button.btn.btn-sm.btn-dark.btn-icon-label{:type => "button"}
+                  %span.btn-inner--icon
+                    %ion-icon{:name => "add", :size => "large"}
+                  %span.btn-inner--text Seen
+      .row
+        .col-md-10.mx-auto
+          .mb-5
+            =@movie.overview

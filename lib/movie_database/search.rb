@@ -7,7 +7,8 @@ module MovieDatabase
 			end
 
 			def by_id(movie_id)
-				Tmdb::Movie.detail(movie_id).map { |movie| MovieDatabase::Details.new(movie) }
+				tmdb_movie = Tmdb::Movie.detail(movie_id)
+				MovieDatabase::Details.new(tmdb_movie)
 			end
 		end
 	end
