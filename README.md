@@ -21,7 +21,7 @@ I think the interface I built was pretty decent. It covers all the bases of what
 
 ##### What I would have done with more time
 
-* Fix responsiveness. I wasn't able to make the site look good enough on mobile. 
+* Fix responsiveness. I wasn't able to make the site look all that great on mobile. 
 
 * Write some tests. I spent more time on the UI/UX portion of this project because I think it's important to build for that meaningfully. But that came at the expense of writing tests, which are also important. 
 
