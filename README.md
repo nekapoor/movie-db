@@ -5,6 +5,10 @@
 
 I pushed it up to Heroku. You can find it at [http://movie-database-123.herokuapp.com](http://movie-database-123.herokuapp.com). 
 
+* If you notice a lag in load time, it's because I'm running it on a free dyno on Heroku. These dynos go to sleep with any sort of inactivity so an initial load may take longer than desired.
+
+* There may be some movies in the watch list or seen list when you load it up. If you do, this is from testing previously.
+
 #### How To Access The Code
 
 You can find it at [https://github.com/nekapoor/movie-db](https://github.com/nekapoor/movie-db)
