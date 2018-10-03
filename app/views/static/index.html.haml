@@ -3,11 +3,10 @@
     .container.top-buffer
       .row.h-100
         .col-md-12.mx-auto
-          .mb-lg
-            %h4.font-weight-light#popular-title Popular Movies
-            %hr/
-            .row#popularlist
-              =render partial: 'shared/popular', collection: @popular  
+          %h4.font-weight-light#popular-title Popular Movies
+          %hr/
+          .row#popularlist
+            =render partial: 'shared/popular', collection: @popular  
         .col-md-12.mx-auto
           .mb-lg
             %h4.font-weight-light#watchlist-title Movies To Watch
